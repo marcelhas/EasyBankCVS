@@ -23,14 +23,15 @@ The result is a clean, structured CSV ready for import into accounting software 
 1. Open your easybank account
 1. Make a 'Umsatzsuche' over the time/date to extract
 1. Download a CSV file from https://ebanking.easybank.at/ 
-1. Run the Python script with the following arguments; the first should be your extracted CSV
+1. Run the helper script which runs the python scripts
+
+```sh
+./main.sh input.csv
 ```
-./easybank_csv_add_header.py input.csv header.csv
-./easybank_csv_filter.py header.csv filtered.csv
-```
+
 ### FreeFinance
 1. Run the Python script create the final csv
-```
+```sh
 ./freefinance.py filtered.csv freefinance.csv
 ```
 1. Open your 'Bankverbindung' account
@@ -42,7 +43,7 @@ The result is a clean, structured CSV ready for import into accounting software 
 ### ProSaldo. 
 Run the Python script with the following arguments; the first should be your extracted CSV
 1. Run the Python script create the final csv
-```
+```sh
 ./prosaldo.py filtered.csv prosaldo.csv
 ```
 1. Open your 'ProSaldo' account
